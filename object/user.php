@@ -6,7 +6,6 @@ class User {
     // object prooperties
     public $id;
     public $name;
-    public $age;
     public $address;
     public $email;
     public $phone;
@@ -26,18 +25,15 @@ class User {
         // query to insert record of new user signup
         // $this->id = htmlspecialchars(strip_tags($this->id));
         $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->age = $this->age;
         $this->address = htmlspecialchars(strip_tags($this->address));
         $this->email = htmlspecialchars(strip_tags($this->email));
-        $this->phone = htmlspecialchars(strip_tags($this->phone));
         $this->password = htmlspecialchars(strip_tags($this->password));
 
         // query to insert into users table
-        $query = "INSERT INTO " . $this->table_name . "(`name`, `age`, `address`, `email`, `phone`, `password`) VALUES('" . $this->name . "', '"
-                                                                  . $this->age . "', '"
+        $query = "INSERT INTO " . $this->table_name . "(`name`, `address`, `email`, `password`) VALUES('" 
+        							     . $this->name . "', '"
                                                                   . $this->address . "', '"
                                                                   . $this->email . "', '"
-                                                                  . $this->phone . "', '"
                                                                   . $this->password . "')";
 
         // echo $query;
@@ -57,7 +53,7 @@ class User {
     // login user method
     function login(){
         // select all query with user inputed username and password
-        $query = "SELECT `id`, `name`, `age`, `address`, `email`, `phone` FROM " . $this->table_name . 
+        $query = "SELECT `id`, `name`, `address`, `email` FROM " . $this->table_name . 
                     " WHERE email = '" .$this->email. "' AND password = '" .$this->password. "'";
 
         // echo $query;

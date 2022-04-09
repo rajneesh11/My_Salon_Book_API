@@ -14,7 +14,6 @@ $user = new User($db);
  
 // set user property values
 /* $user->name = $_POST['name'];
-$user->age = $_POST['age'];
 $user->address = $_POST['address'];
 $user->email = $_POST['email'];
 $user->phone = $_POST['phone'];
@@ -24,18 +23,14 @@ $data = json_decode(file_get_contents("php://input"), true);
 $res_code = 200;
 
 if(
-    !empty($data['age']) &&
     !empty($data['name']) &&
     !empty($data['address']) &&
     !empty($data['email']) &&
-    !empty($data['phone']) &&
     !empty($data['password'])
  ){
     $user->name = $data['name'];
-    $user->age = $data['age'];
     $user->address = $data['address'];
     $user->email = $data['email'];
-    $user->phone = $data['phone'];
     $user->password = base64_encode($data['password']);
 
     // create the user
