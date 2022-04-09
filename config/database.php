@@ -3,7 +3,7 @@ class Database {
     private $host = "localhost";
     private $db_name = "mysalon";
     private $username = "root";
-    private $pwd = "Qwaszx@123";
+    private $pwd = "root";
     public $conn;
 
     public function getConnection() {
