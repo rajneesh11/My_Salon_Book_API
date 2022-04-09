@@ -3,7 +3,7 @@
 - Owner View
 - User View
 
-## Owner View
+## Owner View 
 | API | Status|
 | ----|-------|
 | No. of bookings for today | Yes |
@@ -18,3 +18,11 @@
 | Home Page - Show upcoming booking | Yes |
 | Booking as required (on any date = max 15 Days) | Yes |
 | Cancel Booking | Yes |
+
+```http
+  Booking /api/booking/
+```
+
+```http
+  user /api/user/
+```
