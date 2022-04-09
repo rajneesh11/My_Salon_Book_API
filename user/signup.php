@@ -58,7 +58,7 @@ if(
  }
  
 
-http_response_code($res_code);
+// http_response_code($res_code);
 
 echo json_encode($user_arr);
 

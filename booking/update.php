@@ -37,13 +37,13 @@ if(!empty($data['id']) && !empty($data['cancelled'])) {
 
 if($req_completed) {
     // set response code - 200 OK
-    http_response_code(200);
+    // http_response_code(200);
 
     // tell the user
     echo json_encode(array("status" => true, "message" => "Booking slot updated."));
 } else {
     // set response code - 503 service unavailable
-    http_response_code(503);
+    // http_response_code(503);
 
     // tell the user
     echo json_encode(array("status" => false, "message" => "Unable to update booking slot."));

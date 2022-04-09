@@ -16,7 +16,7 @@ $booking = new Booking($db);
 $today_bookings = $booking->count();
 
 // set response code - 200 OK
-http_response_code(200);
+//http_response_code(200);
   
 // tell the user no products found
 echo json_encode(

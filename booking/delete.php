@@ -22,13 +22,13 @@ $booking->id = $data['id'];
 
 if($booking->delete()) {
     // set response code - 200 OK
-    http_response_code(200);
+    // http_response_code(200);
 
     // tell the user
     echo json_encode(array("status" => true, "message" => "Booking slot deleted."));
 } else {
     // set response code - 503 service unavailable
-    http_response_code(503);
+    // http_response_code(503);
 
     // tell the user
     echo json_encode(array("status" => false, "message" => "Unable to delete booking slot."));

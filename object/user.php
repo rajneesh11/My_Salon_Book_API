@@ -31,10 +31,10 @@ class User {
 
         // query to insert into users table
         $query = "INSERT INTO " . $this->table_name . "(`name`, `address`, `email`, `password`) VALUES('" 
-        							     . $this->name . "', '"
-                                                                  . $this->address . "', '"
-                                                                  . $this->email . "', '"
-                                                                  . $this->password . "')";
+                                                                . $this->name . "', '"
+                                                                . $this->address . "', '"
+                                                                . $this->email . "', '"
+                                                                . $this->password . "')";
 
         // echo $query;
         // prepare query

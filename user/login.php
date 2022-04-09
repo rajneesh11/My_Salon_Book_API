@@ -59,7 +59,7 @@ if(!empty($data['email']) && !empty($data['password'])) {
 }
 
 // set response code - 200 OK
-http_response_code($res_code);
+// http_response_code($res_code);
 // make it json format
 echo json_encode($user_arr);
 ?>
