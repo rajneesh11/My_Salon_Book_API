@@ -59,7 +59,7 @@ class Booking {
     // Read data
     function read($user) {
         $hq = "SELECT b.id, b.booked_date, b.job, b.slot, b.booked_on, u.name, b.cancelled, b.job_served FROM " . $this->table_name 
-                . " as b JOIN user as u WHERE b.user = u.id AND b.booked_date = '". date('Y-m-d') ."'";
+                . " as b JOIN user as u WHERE b.booked_date = '". date('Y-m-d') ."'";
         if ($user == "admin")
             $query = $hq;//"SELECT * FROM " . $this->table_name; // . " WHERE user = " . $this->user;
         else
@@ -77,7 +77,7 @@ class Booking {
     // Read databookings_data
     function read_old($user) {
         $hq = "SELECT b.id, b.booked_date, b.job, b.slot, b.booked_on, u.name, b.cancelled, b.job_served FROM " . $this->table_name 
-                . " as b JOIN user as u WHERE b.user = u.id AND b.booked_date < '". date('Y-m-d') ."'";
+                . " as b JOIN user as u WHERE b.booked_date < '". date('Y-m-d') ."'";
         if ($user == "admin")
             $query = $hq;//"SELECT * FROM " . $this->table_name; // . " WHERE user = " . $this->user;
         else
